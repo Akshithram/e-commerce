@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom E-commerce Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="homePage">
+        <header>
+            <div class="logo">Shoppyyy</div>
+            <button id="logoutButton">Logout</button>
+        </header>
+        
+        <section id="productCategories">
+            <h2>Product Categories</h2>
+            <div class="category" onclick="showProducts('electronics')">Electronics</div>
+            <div class="category" onclick="showProducts('fashion')">Fashion</div>
+            <div class="category" onclick="showProducts('home')">Home</div>
+        </section>
+        
+        <section id="productList" class="hidden">
+            <h2 id="categoryTitle"></h2>
+            <div id="products" class="products">
+                <!-- Product items will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="productDetails" class="hidden">
+            <h2>Product Details</h2>
+            <div id="productDetailsContent">
+                <!-- Product details will be dynamically inserted here -->
+            </div>
+            <button onclick="goBackToProducts()">Back</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
